@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "SimpleReddit"
+  "defaultProject": "SimpleReddit",
+  "cli": {
+    "analytics": "1bd88bdd-4036-4418-a669-768ed4c5e078"
+  }
 }
