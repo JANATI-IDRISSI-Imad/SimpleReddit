@@ -11,19 +11,23 @@ import { HttpClientModule} from '@angular/common/http'
 import { from } from 'rxjs';
 import { RegisterComponent } from './register/register.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SubjectsComponent } from './subjects/subjects.component';
+import { StickyNavModule } from 'ng2-sticky-nav';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
     RegisterComponent,
-    NavbarComponent
+    NavbarComponent,
+    SubjectsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    StickyNavModule
   ],
   providers: [AuthapiService],
   bootstrap: [AppComponent]

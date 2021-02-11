@@ -12,7 +12,7 @@ export class AuthapiService {
     const headers=new HttpHeaders({AUthorization : 'Basic '+btoa(username+ ":"+password)})
     return this.http.get(this.apURL+"test",{headers,responseType:'text' as "json"});
   }
-  public register(user){
+  public register(user : User){
     return this.http.post<User>(this.apURL+"register", user);
   }
 }
