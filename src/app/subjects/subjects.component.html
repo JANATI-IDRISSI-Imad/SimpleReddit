@@ -11,19 +11,19 @@
                         </div>
                     </div>
                     <div>
-                        <form   method="get"><!-- th:action="'/Subject/voteUp'+${subject.getId()}"-->
-                            <button  class="btn btn-outline-primary btn-sm"  >
+                        <div   ><!-- th:action="'/Subject/voteUp'+${subject.getId()}"-->
+                            <button  (click)="voteUp(subject)" class="btn btn-outline-primary btn-sm"  >
                                 <i class="fas fa-arrow-up"></i>
                             </button>
-                        </form>
+                        </div>
                         <div>
                             <small  >{{subject.vote}}</small>
                         </div>
-                        <form method="get"><!-- th:action="'/Subject/voteUp'+${subject.getId()}"-->
-                            <button  class="btn  btn-outline-danger btn-sm"  >
+                        <div ><!-- th:action="'/Subject/voteUp'+${subject.getId()}"-->
+                            <button  (click)="voteDown(subject)" class="btn  btn-outline-danger btn-sm"  >
                                 <i class="fas fa-arrow-down"></i>
                             </button>
-                        </form>
+                        </div>
                     </div>
 
                 </div>

@@ -11,6 +11,7 @@ export class SubjectsComponent implements OnInit {
   searchText="";
   subjects : Subject[]=[];
   resultsubject : Subject[]=[];
+  up:Number=1;
   constructor(private subjectService : SubjectService) { }
 
   ngOnInit(): void {
@@ -20,6 +21,19 @@ export class SubjectsComponent implements OnInit {
     this.subjectService.findAll()
       .subscribe(subjects=> 
         this.subjects=this.resultsubject=subjects)
+  }
+
+  voteUp(subject:Subject){
+    subject.vote++;
+    this.subjectService.vote(subject.id,subject.vote)
+      .subscribe(()=>{
+    })
+  }
+  voteDown(subject:Subject){
+    this.subjectService.vote(subject.id,subject.vote-1)
+      .subscribe(()=>{
+        subject.vote--;
+    })
   }
 
 }

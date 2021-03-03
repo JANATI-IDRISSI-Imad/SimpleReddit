@@ -7,7 +7,7 @@ import { SubjectsComponent } from './subjects/subjects.component';
 const routes: Routes = [
   {path:"login",component :LoginComponent},
   {path:"register",component :RegisterComponent},
-  {path:"home",component :SubjectsComponent},
+  {path:"",component :SubjectsComponent},
 ];
 
 @NgModule({
